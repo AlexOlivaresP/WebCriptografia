@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirma tu correo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar bg-dark border-bottom border-bottom-dark fs-2" data-bs-theme="dark">
+            <div class="container-fluid">
+              <span class="navbar-text">
+                CONFIRMA TU CORREO
+              </span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="card text-center">
+            <div class="card-header">
+              CONFIRMACION
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">HEMOS ENVIADO UN CORREO ELECTRONICO</h5>
+              <p class="card-text">INGRESA A TU CORREO ELECTRONICO E INGRESA EL CODIGO ENVIADO:</p>
+            
+              <form action="confirma2.php" method="POST">
+                
+                <div class="col-auto">
+                    <div class="col-auto">
+                        <label for="inputCorreo" class="col-form-label">Correo electrónico</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="email" name="correo" id="inputCorreo" class="form-control" aria-labelledby="correoHelpInline">
+                    </div>
+                    <label for="inputPassword6" class="col-form-label">CODIGO</label>
+                    </div>
+                    <div class="col-auto">
+                    <input type="password" id="inputPassword6" class="form-control" aria-labelledby="passwordHelpInline" name="codigo">
+                    </div>
+                    <div class="col-auto">
+                    <span id="passwordHelpInline" class="form-text">
+                        Ingresa el codigo enviado a tu correo.
+                    </span>
+                    </div>
+                    <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-3">CONFIRMAR</button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer text-body-secondary">
+              EQUIPO 1 criptografia
+            </div>
+          </div>
+    </main>
+
+    <nav class="navbar bg-dark fixed-bottom ">
+        <div class="container-fluid">
+          
+        </div>
+      </nav>
+
+</body>
+</html>

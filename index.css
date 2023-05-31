@@ -1,0 +1,95 @@
+header {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+}
+
+main{
+    background-color: #f5f5f5;
+    /* padding: 280px 0; */
+
+}
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+nav{
+    position: absolute;
+    top:110px;
+    right: 0;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #323bb1;
+    text-decoration: underline;
+}
+
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+    
+}
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+}
+
+.productos li:hover{
+    border-color: #161a53;
+}
+
+.productos li:active{
+    border-color: #555cb4;
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+
+.productos li:hover h2{
+    font-size: 33px;
+}
+
+.prod-desc{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #999999;
+    margin: 10px 0;
+}
+.prod-price{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #999999;
+    /* top botoom lef right */
+    margin: 70px 0;
+}
