@@ -156,10 +156,11 @@ for (let i = 0; i < mostrarClave.length; i++) {
     });
 }
 
+
 /*========================================
 Validamos el formulario de registro
 ==========================================*/
-let nombre,correo,password,cbx_notificaciones,cbx_terminos;
+let nombre,correo,password,password2,cbx_notificaciones,cbx_terminos;
 
 if(document.getElementById('btnRegistro')){
 
@@ -177,6 +178,7 @@ if(document.getElementById('btnRegistro')){
         nombre=formRegistro.nombre.value.trim();
         correo=formRegistro.correo.value.trim();
         password=formRegistro.password.value.trim();
+        password2=formRegistro.password2.value.trim();
 
         cbx_notificaciones=formRegistro.cbx_notificaciones;
         cbx_terminos=formRegistro.cbx_terminos;
@@ -196,7 +198,6 @@ if(document.getElementById('btnRegistro')){
             //removemos esa clase con la siguente funcion
             inputErrorRemove([formRegistro.nombre,formRegistro.correo,formRegistro.password]);
         }
-
 
         //validamos a cada input
         if(nombre=="" || nombre==null){
@@ -249,9 +250,22 @@ if(document.getElementById('btnRegistro')){
                 return false;
             }
         }
+        if(!validarcampechano(password)){
+            mostrarError('La contraseña debe tener al menos un caracter especial',msError);
+            inputError([formRegistro.password]);
+            formRegistro.password.focus();
+            return false;
+        }
 
+        //confirmamos la contraseña
+        if(password2 != password){
+            mostrarError('Las contraseñas no coinciden',msError);
+            inputError([formRegistro.password2]);
+            formRegistro.password2.focus();
+            return false;
+        }
+        
         //validamos el cbx-terminos
-
         if(cbx_terminos.checked==false){
             mostrarError('Por favor aceptar Términos y condiciones',msError);
             
@@ -325,6 +339,10 @@ if(document.getElementById('btnLogin')){
     })
 }
 
+
+
+
+
 /*
     CREAMOS FUNCIONES PARA MOSTRAR ERROR EN PANTALLA Y ADEMAS VALIDAR SI LOS CAMPOS SON INGRESADOS CORECTAMENTE
 */
@@ -375,6 +393,13 @@ function validarLetrasNumeros(valor){
     return true;
 }
 
+function validarcampechano(valor){
+    if(!/[!@#$%^&*(),.?":{}|<>]/.test(valor)){
+        return false;
+    }
+    return true;
+}
+
 
 /*===============================================
     Válidamos solo letras
@@ -408,4 +433,3 @@ function validarSoloNumeros(valor){
     }
     return true;
 }
-
